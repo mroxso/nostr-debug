@@ -115,7 +115,7 @@ export function RelayDebugger({ relays, setRelays, onMessage }: RelayDebuggerPro
         try {
           const data = JSON.parse(event.data);
           onMessage(url, 'received', data);
-        } catch (error) {
+        } catch {
           onMessage(url, 'received', { type: 'parse_error', raw: event.data });
         }
       };

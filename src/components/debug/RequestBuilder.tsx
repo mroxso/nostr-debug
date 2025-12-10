@@ -73,7 +73,7 @@ export function RequestBuilder({ relays, onSend }: RequestBuilderProps) {
     let message: unknown;
     try {
       message = JSON.parse(messageContent);
-    } catch (error) {
+    } catch {
       toast({
         title: 'Invalid JSON',
         description: 'Please check your message format',
